@@ -1,8 +1,6 @@
 const express = require("express");
 const mongoose = require("mongoose");
 
-// require routes here
-
 const apiRoutes = require("./routes/apiRoutes.js");
 const htmlRoutes = require("./routes/htmlRoutes.js");
 
