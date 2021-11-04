@@ -3,7 +3,15 @@ const { Workout } = require("../models");
 
 // get last workout
 router.get("/api/workouts", (req, res) => {
-  Workout.find({})
+  Workout.aggregate([
+    {
+      $addfields: {
+        totalDuration: {
+          $sum: "$exercises.duration",
+        },
+      },
+    },
+  ])
     .then((data) => {
       res.json(data);
     })
@@ -25,18 +33,22 @@ router.post("/api/workouts", (req, res) => {
 
 // add exercise
 router.put("/api/workouts/:id", (req, res) => {
-  Workout.findByIdAndUpdate(req.params.id, {$push: { exercises: req.body}},
+  Workout.findByIdAndUpdate(
+    req.params.id,
+    {
+      $push: { exercises: req.body },
+    },
     {
       new: true,
-      runValidators: true
+      runValidators: true,
     }
   )
-  .then(data => {
-    res.json(data);
-  })
-  .catch(err => {
-    res.status(400).json(err);
-  })
+    .then((data) => {
+      res.json(data);
+    })
+    .catch((err) => {
+      res.status(400).json(err);
+    });
 });
 
 module.exports = router;
