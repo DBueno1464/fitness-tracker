@@ -3,15 +3,7 @@ const { Workout } = require("../models");
 
 // get last workout
 router.get("/api/workouts", (req, res) => {
-  Workout.aggregate([
-    {
-      $addfields: {
-        totalDuration: {
-          $sum: "$exercises.duration",
-        },
-      },
-    },
-  ])
+  Workout.find({})
     .then((data) => {
       res.json(data);
     })
