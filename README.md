@@ -34,4 +34,4 @@ Email: [DerrickBueno00@gmail.com](DerrickBueno00@gmail.com)
 
 GitHub: [https://github.com/DBueno1464](https://github.com/DBueno1464/fitness-tracker)
 
-Link: [Fitness Tracker](https://tranquil-reaches-71062.herokuapp.com/?id=6188a14e6153500016df6363)
+Heroku Link: [Fitness Tracker](https://tranquil-reaches-71062.herokuapp.com/?id=6188a14e6153500016df6363)
