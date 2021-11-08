@@ -21,11 +21,23 @@ An fitness tracker application that uses Mongo database with a Mongoose schema a
 ## Installations
 
 First, we run
-`npm install`
+
+```
+npm install
+```
+
 to get our node libraries and packages. Then, we want to create and seed our mongo databse. We can do this by running
-`npm run seed`
+
+```
+npm run seed
+```
+
 Finally, we just run
-`npm start`
+
+```
+npm start
+```
+
 to start our application.
 
 ## Links:
