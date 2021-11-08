@@ -23,5 +23,3 @@ app.use(htmlRoutes);
 app.listen(PORT, () => {
     console.log(`Listening at http://localhost:${PORT}`)
 });
-
-mongodb+srv://Derrick:cats@cluster0.bda5u.mongodb.net/workout?retryWrites=true&w=majority
